@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>首页-元字符科技</title>
+<meta name="description" content="字符科技" />
+<meta name="keywords" content="字符科技" />
+<script type="text/javascript" src="./static/M.js"></script>
+<script type="text/javascript" src="./static/jquery-1.js"></script>
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" type="text/css" href="./static/style.css" />
+<link rel="stylesheet" type="text/css" href="./static/mb5u_home.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG.js" ></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+</head>
+
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){
+	  
+	  var typename="";
+	  $(".min_nav_left a:gt(0)").each(function(i){
+	  
+	  	var aname = $(this).find("font").html();
+		
+		
+	  	if(aname == typename){
+		$(".min_nav_left a").eq(0).removeClass("hov");
+			$(this).addClass("hov");
+		}
+	  });
+	});
+</script>
+	<div class="header">
+		<div class="div">
+			<div class="logo">
+				<a title="字符科技" href="./static/index.html">
+					<img src="./static/logo.png" title="字符科技" /></a>
+			</div>
+			<div class="nav">
+				<ul class="nav_list" id="yw0">
+					<li class="active"><a title="首页" href="index.html">首页</a></li>
+					<li><a href="products.html">案例</a></li>
+					<li><a href="news.html">资讯</a></li>
+					<li><a href="services.html">服务</a></li>
+					<li><a href="mobile.html">手机</a></li>
+					<li><a href="about.html">关于</a></li>
+					<li><a href="contact.html">联系</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script>
+      M.ready(function(){
+        var timer ,
+        counter = -1 ,
+        intval = 8000 ;
+        var imgs = [
+          { cn:'a1' , btn:'cirY' , cs:'cnow' , href:'#'} ,
+          { cn:'a2' , btn:'cirG' , cs:'' , href:'#'} ,
+          { cn:'a3' , btn:'cirX' , cs:'' , href:'#' },
+		  { cn:'a4' , btn:'cirS' , cs:'' , href:'#' },
+		  { cn:'a5' , btn:'cirM' , cs:'' , href:'#' },
+        ];
+        var html = "" ,
+        tmpl = '<li><a href="#" rel="nofollow" class="cc {cs}" id="{btn}"></a></li>';
+        imgs.each(function( i , img ){
+          M.getEl("#circle").append( M.template( tmpl , img ) );
+          (function(N , btn ){
+            M.getEl( "#" + btn ).click(function(){
+              counter = N  - 1 ;
+              play();
+            });
+          }(i , img.btn ));
+        });
+        function play(){
+          !!timer && clearTimeout( timer );
+          counter =  counter + 1 == imgs.length   ? 0 :  counter + 1 ;
+          M.getEls(".cnow").doApply( "removeClass" , "cnow");
+          M.getEl("#" + imgs[ counter ].btn ).addClass("cnow");
+          M.get("#box").className= imgs[ counter ].cn ;
+          timer = setTimeout( play , intval );
+        }
+        setTimeout( play , intval ) ;
+        
+        M.getEl("#li").click(function(){
+          console.log( imgs[  counter <0 ? 0 : counter ].href )
+          M.locate( imgs[  counter <0 ? 0 : counter ].href )
+          return false;
+        });
+        
+        M.getEl("#nClose").click(function(){
+          M.get("#nWin").style.display = "none";
+        });
+        M.getEl("#nokBtn").click(function(){
+          M.get("#nWin").style.display = "block";
+        })
+      });
+</script>
+
+	<div id="index_box">
+		<div id="box" class="a1">
+			<div id="anim">
+				<div id="marquee">
+					<ul id="mPics">
+						<li id="li"><a href="#" rel="nofollow">&nbsp;</a></li>
+					</ul>
+					<ul id="circle"></ul>
+				</div>
+			</div>
+		</div>
+		<!--第一栏目 开始-->
+
+
+
+
+		<div class="serve">
+			<div class="title">
+				<h1>服务项目</h1>
+			</div>
+			<div class="serve_con">
+
+				<div class="s1">
+					<span></span>
+					<ul>
+						<li><a href="#" title="网站设计及开发"><h2>网站设计及网站建设</h2></a></li>
+						<li>为企业提供网站品牌策划、网站设计、网站程序开发等一体化流程的网站建设服务。</li>
+					</ul>
+				</div>
+
+
+				<div class="s2">
+					<span></span>
+					<ul>
+						<li><a href="#" title="平面设计"><h2>微信订阅号推广</h2></a></li>
+						<li>涵盖了名片设计、海报创意设计、宣传画册排版设计、封面设计等相关印刷品的专业设计服务。</li>
+					</ul>
+				</div>
+
+
+				<div class="s3">
+					<span></span>
+					<ul>
+						<li><a href=""
+							title="手机界面设计及开发"><h2>手机界面设计及开发</h2></a></li>
+						<li>为移动设备、平板电脑、移动产品（如手机网站）等终端提供交互程序及界面设计服务。</li>
+					</ul>
+				</div>
+
+
+				<div class="s4">
+					<span></span>
+					<ul>
+						<li><a href="#" title="标识及VI设计"><h2>SEO优化推广</h2></a></li>
+						<li>企业是否够大，取决与企业形象给人影响是否够深，品牌效益够强。</li>
+					</ul>
+				</div>
+			</div>
+			<!--serve_con-->
+		</div>
+		<!--serve-->
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('.boxgrid.captionfull').hover(function(){
+	$(".cover", this).stop().animate({top:'104px'},{queue:false,duration:110});
+	}, function() {
+	$(".cover", this).stop().animate({top:'144px'},{queue:false,duration:110});
+	});
+	});
+</script>
+		<div class="case_main">
+			<div class="case">
+				<div class="title">
+					<h1>最新案例</h1>
+					<span>
+						<a href="#">企业网站系列</a> /
+						<a href="#">微信公众号</a>/
+						<a href="#">进销存系统</a>
+					</span>
+						<a href="#" class="quan" title="全部案例">全部</a>
+				</div>
+
+				<div class="case_con">
+					<div class="boxgrid captionfull">
+						<a href="">
+							<img alt="omgreen企业LOGO设计" title="omgreen企业LOGO设计" src="./static/14142345F050-20R57.jpg" height="144" width="233" /></a>
+						<div class="cover boxcaption">
+							<h3>
+								<a rel="contact" class="url"
+									href="">omgreen企业LOGO设计</a>
+							</h3>
+						</div>
+					</div>
+					<div class="boxgrid captionfull">
+						<a href="">
+							<img alt="青海上捷LOGO设计" title="青海上捷LOGO设计" src="./static/1414234562B0-145Y4.jpg" height="144" width="233" /></a>
+						<div class="cover boxcaption">
+							<h3>
+								<a rel="contact" class="url"
+									href="">青海上捷LOGO设计</a>
+							</h3>
+						</div>
+					</div>
+					<div class="boxgrid captionfull">
+						<a href="">
+							<img alt="北京容汇易通LOGO形象设计" title="北京容汇易通LOGO形象设计" src="./static/14142345553P-92Y9.jpg" height="144" width="233" /></a>
+						<div class="cover boxcaption">
+							<h3>
+								<a rel="contact" class="url"
+									href="">北京容汇易通LOGO形象设计</a>
+							</h3>
+						</div>
+					</div>
+					<div class="boxgrid captionfull">
+						<a href="">
+							<img alt="HDHS净心失眠枕名片设计" title="HDHS净心失眠枕名片设计" src="./static/141423454B40-2W20.jpg" height="144" width="233" /></a>
+						<div class="cover boxcaption">
+							<h3>
+								<a rel="contact" class="url"
+									href="">HDHS净心失眠枕名片设计</a>
+							</h3>
+						</div>
+					</div>
+					<div class="boxgrid captionfull">
+						<a
+							href="">
+								<img alt="宝尼尔电器LOGO设计" title="宝尼尔电器LOGO设计" src="./static/1414234541930-1ET0.jpg" height="144" width="233" />
+						</a>
+						<div class="cover boxcaption">
+							<h3>
+								<a rel="contact" class="url" href="">宝尼尔电器LOGO设计</a>
+							</h3>
+						</div>
+					</div>
+					<div class="boxgrid captionfull">
+						<a href="">
+							<img alt="紫芳轩LOGO设计" title="紫芳轩LOGO设计" src="./static/141423453S50-131946.jpg" height="144" width="233" />
+						</a>
+						<div class="cover boxcaption">
+							<h3>
+								<a rel="contact" class="url"
+									href="">紫芳轩LOGO设计</a>
+							</h3>
+						</div>
+					</div>
+					<div class="boxgrid captionfull">
+						<a href="">
+							<img alt="鸿耀科技企业形象logo设计" title="鸿耀科技企业形象logo设计" src="./static/14142345335Z-95244.jpg" height="144" width="233" />
+						</a>
+						<div class="cover boxcaption">
+							<h3>
+								<a rel="contact" class="url"
+									href="">鸿耀科技企业形象logo设计</a>
+							</h3>
+						</div>
+					</div>
+					<div class="boxgrid captionfull">
+						<a href="">
+							<img alt="北京索阳太阳能logo设计" title="北京索阳太阳能logo设计" src="./static/1414234530D0-N614.jpg" height="144" width="233" />
+						</a>
+						<div class="cover boxcaption">
+							<h3>
+								<a rel="contact" class="url"
+									href="">北京索阳太阳能logo设计</a>
+							</h3>
+						</div>
+					</div>
+
+				</div>
+				<!--case_con-->
+			</div>
+			<!--case-->
+		</div>
+		<!--case_main-->
+
+		<div class="index_box">
+			<div class="news">
+				<div class="title">
+					<h1>字符动态</h1>
+					<a title="资讯动态" href="">全部 &gt;</a>
+				</div>
+				<div class="news_con">
+					<dl class="new_list">
+						<dt>
+							<a href="">
+								<img alt="简单的营销策略重复做，" title="简单的营销策略重复做，" src="./static/1409236253160-149634.jpg" height="54" width="87" />
+							</a>
+						</dt>
+						<dd>
+							<h2>
+								<span class="data">08-28</span>
+									<a href="">简单的营销策略重复做，</a>
+							</h2>
+							<p>现在出去经常接触一些企业的老板和管理人员，发现他们在做企业网络营销的时候同样很浮躁，什么都想做，什么都想分一杯羹，但总是三...</p>
+						</dd>
+					</dl>
+					<dl class="new_list">
+						<dt>
+							<a href="">
+								<img alt="中小企业老板为什么不愿" title="中小企业老板为什么不愿" src="./static/140923624W50-1362Z.jpg" height="54" width="87" />
+							</a>
+						</dt>
+						<dd>
+							<h2>
+								<span class="data">08-28</span><a
+									href="">中小企业老板为什么不愿</a>
+							</h2>
+							<p>网站就像是企业的门店，如果仅仅是为了展示宣传公司形象，那无可厚非。如果你想利用网站卖东西，那就得把你的网站给装修好，同时还...</p>
+						</dd>
+					</dl>
+
+
+				</div>
+				<!--news_con-->
+			</div>
+			<!--news-->
+
+			<div class="xuqiu">
+				<ul>
+					<li>字符科技全新启航</li>
+					<li>提供全方位的设计解决方案</li>
+					<li>专注 <a href="#"
+						title="模板无忧不仅仅从事北京网页设计，我们还为上海以及全国中小企业提供最专业的网站设计服务。">网站设计</a>、 <a
+						href="#"
+						title="为移动设备、平板电脑、移动产品等终端提供交互流程及界面设计服务。包括IOS、Android、Win等多平台。">手机网站</a>、
+						<a href="#" title="以用户体验为核心的设计可以让企业产品创造持续发展的竞争优势，并让您享受一站式建站服务。">网站建设</a>、
+						<a href="#" title="SEO优化有利于促进产品的销售,占领市场有限的份额。">SEO优化</a>
+					</li>
+					<li><h1>
+							我们只做一件事 :<span>持续为客户创造价值</span>
+						</h1></li>
+					<li><a href=""
+						class="tijiao" title="在线提交需求" rel="nofollow">在线提交需求</a><a
+						target="_blank"
+						href="tencent://message/?uin=342834599&Site=qq&Menu=yes"
+						rel="nofollow" title="在线咨询" class="qqico">QQ在线咨询</a></li>
+				</ul>
+			</div>
+			<!--xuqiu-->
+		</div>
+		<!--index_box-->
+
+		<div class="client">
+			<div class="title">
+				<h1>字符科技的客户</h1>
+				<a href="#">全部客户列表&gt;</a>
+			</div>
+			<div class="client_list">
+				<ul>
+					<li><img src="./static/q0.jpg" title="北京九阳实业网站设计" alt="北京九阳实业网站设计" /></li>
+					<li><img src="./static/q1.jpg" title="未来之家太阳能网站设计" alt="未来之家太阳能网站设计" /></li>
+					<li><img src="./static/q2.jpg" title="宝尼尔电器网站设计" alt="宝尼尔电器网站设计" /></li>
+					<li><img src="./static/q3.jpg" title="北京交通铁路技术研究所官方网站设计" alt="北京交通铁路技术研究所官方网站设计" /></li>
+					<li><img src="./static/q4.jpg" title="紫芳轩茶叶网站设计" alt="紫芳轩茶叶网站设计" /></li>
+					<li><img src="./static/q5.jpg" title="北京鸿耀科技官方网站设计" alt="北京鸿耀科技官方网站设计" /></li>
+					<li><img src="./static/q6.jpg" title="万通物业形象网站设计" alt="万通物业形象网站设计" /></li>
+					<li><img src="./static/q7.jpg" title="英菲丹顿箱包网站设计" alt="英菲丹顿箱包网站设计" /></li>
+					<li><img src="./static/q8.jpg" title="北京星云焊接网站设计" alt="北京星云焊接网站设计" /></li>
+					<li><img src="./static/q9.jpg" title="北京恒动环境网站设计" alt="北京恒动环境网站设计" /></li>
+					<li><img src="./static/q10.jpg" title="新豪世纪房产管理信息平台界面设计" alt="新豪世纪房产管理信息平台界面设计" /></li>
+					<li><img src="./static/q11.jpg" title="凯乐瑞克电热膜网站设计" alt="凯乐瑞克电热膜网站设计" /></li>
+				</ul>
+			</div>
+		</div>
+		<!--client-->
+
+		<!--友情链接-->
+		<div id="link">
+			<div class="div">
+				<div class="lm3 skin2">
+					<span class="fs16 black">友情链接</span>
+				</div>
+				<ul class="kh">
+
+					<li><a href="http://www.yuanzifu.com/" target="_blank">元字符科技</a>
+					</li>
+					<li><a href="http://crm.yuanzifu.com/" target="_blank">元字符进销存系统</a>
+					</li>
+					<li><a href="http://weixin.yuanzifu.com/" target="_blank">元字符微信订阅号系统</a>
+					</li>
+					<li><a href="http://www.blkqyy.com/" target="_blank">北仑口腔医院</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<!--end 友情链接-->
+
+		<!--第三栏目 开始-->
+		<div class="part3">
+			<div class="div">
+				<div class="part3mk">
+					<h2 id="contus" class="skin2"></h2>
+					<p>E-mail:fuhao.li@foxmail.com</p>
+					<p>QQ：342834599</p>
+				</div>
+				<div class="part3mk mrt20">
+					<a id="weibo" href="http://www.weibo.com/aopli" class="skin2" rel="nofollow" target="_blank">
+						http://www.weibo.com/aopli
+					</a>
+					<script>
+           WB2.anyWhere(function(W){
+						W.widget.hoverCard({
+							id: "card"
+						});
+         });
+        </script>
+				</div>
+				<div class="part3mk mrt15">
+					<a id="online" class="skin2" target="_blank" rel="nofollow" href="">在线提交需求</a>
+				</div>
+			</div>
+		</div>
+		<!--第三栏目 结束-->
+	</div>
+
+	<div id="footer">
+		<div class="div">
+			<div class="nav_left">
+				<a title="首页" href="index.html">首页</a> 
+				<a title="案例展示" href="products.html">客户案例</a> 
+				<a title="资讯动态" href="news.html">新闻资讯</a> 
+				<a title="服务项目" href="services.html">服务项目</a>
+				<a title="手机网站建设" href="mobile.html">手机建站</a>
+				<a title="关于我们" href="about.html">关于我们</a> 
+				<a title="联系我们" rel="nofollow" href="contact.html">联系我们</a>
+			</div>
+			<div class="copy">Copyright © 2012 - 2015 字符科技, All Rights
+				Reserved</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
